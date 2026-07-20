@@ -36,18 +36,18 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Sales & Marketing", href: "/business-system/sales-marketing" },
       { label: "Operations", href: "/business-system/operations" },
       { label: "Finance", href: "/business-system/finance" },
-      { label: "Leadership, People & Governance", href: "/business-system/leadership" },
-      { label: "Technology, Data & AI", href: "/business-system/technology" },
+      { label: "Leadership, People & Governance", href: "/business-system/leadership-governance" },
+      { label: "Technology, Data & AI", href: "/business-system/technology-data-ai" },
     ],
   },
   {
     label: "Proof",
-    href: "/proof",
+    href: "/case-studies",
     children: [
-      { label: "Case Studies", href: "/proof" },
-      { label: "Purplebox Storage", href: "/proof/purplebox-storage" },
-      { label: "Purplebox Moving", href: "/proof/purplebox-moving" },
-      { label: "Centuries Contracting", href: "/proof/centuries-contracting" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Purplebox Storage", href: "/case-studies/purplebox-storage" },
+      { label: "Purplebox Moving", href: "/case-studies/purplebox-moving" },
+      { label: "Centuries Contracting", href: "/case-studies/centuries-contracting" },
     ],
   },
   {
@@ -61,11 +61,11 @@ const NAV_ITEMS: NavItem[] = [
   },
   {
     label: "Company",
-    href: "/company",
+    href: "/about",
     children: [
-      { label: "About Bayshire", href: "/company" },
-      { label: "Leadership", href: "/company/leadership" },
-      { label: "How We Work", href: "/company/how-we-work" },
+      { label: "About Bayshire", href: "/about" },
+      { label: "Leadership", href: "/leadership" },
+      { label: "How We Work", href: "/how-we-work" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -268,7 +268,7 @@ export default function SiteHeader() {
         {/* CTA + hamburger */}
         <div className="flex items-center gap-4">
           <Link
-            href="/diagnosis"
+            href="/start"
             className="hidden sm:inline-flex items-center rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-navy transition-all hover:bg-dark-gold hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
           >
             Start Your Diagnosis
@@ -319,7 +319,7 @@ export default function SiteHeader() {
             {/* Mobile CTA */}
             <div className="mt-8 px-6">
               <Link
-                href="/diagnosis"
+                href="/start"
                 className="flex w-full items-center justify-center rounded-full bg-gold px-6 py-3.5 text-base font-semibold text-navy transition-all hover:bg-dark-gold hover:text-white"
                 onClick={() => setMobileOpen(false)}
               >

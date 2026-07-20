@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const valueLinks = [
   {
-    href: "/business-health-check",
+    href: "/health-check",
     label: "Take the Business Health Check",
   },
   {

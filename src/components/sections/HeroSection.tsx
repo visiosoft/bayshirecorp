@@ -8,7 +8,7 @@ interface CtaProps {
 interface HeroSectionProps {
   eyebrow?: string;
   title: string;
-  description: string;
+  description?: string;
   primaryCta?: CtaProps;
   secondaryCta?: CtaProps;
   variant: "navy" | "white";
@@ -59,13 +59,15 @@ export default function HeroSection({
           {title}
         </h1>
 
-        <p
-          className={`mt-6 max-w-2xl text-lg leading-relaxed md:text-xl ${
-            isNavy ? "text-white/80" : "text-slate"
-          }`}
-        >
-          {description}
-        </p>
+        {description && (
+          <p
+            className={`mt-6 max-w-2xl text-lg leading-relaxed md:text-xl ${
+              isNavy ? "text-white/80" : "text-slate"
+            }`}
+          >
+            {description}
+          </p>
+        )}
 
         {(primaryCta || secondaryCta) && (
           <div className="mt-10 flex flex-wrap gap-4">

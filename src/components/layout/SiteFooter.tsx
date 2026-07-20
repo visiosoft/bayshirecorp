@@ -20,16 +20,14 @@ const SYSTEM_LINKS = [
   { label: "Sales & Marketing", href: "/business-system/sales-marketing" },
   { label: "Operations", href: "/business-system/operations" },
   { label: "Finance", href: "/business-system/finance" },
-  { label: "Leadership & Governance", href: "/business-system/leadership" },
-  { label: "Technology, Data & AI", href: "/business-system/technology" },
+  { label: "Leadership & Governance", href: "/business-system/leadership-governance" },
+  { label: "Technology, Data & AI", href: "/business-system/technology-data-ai" },
 ];
 
 const EXPLORE_LINKS = [
-  { label: "Case Studies", href: "/proof" },
-  { label: "Business Problems", href: "/intelligence/problems" },
-  { label: "Insights", href: "/intelligence/insights" },
-  { label: "Tools", href: "/intelligence/tools" },
-  { label: "About", href: "/company" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "How We Work", href: "/how-we-work" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
