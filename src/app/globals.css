@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --- Brand Colors --- */
+  --color-navy: #071A33;
+  --color-deep-navy: #041121;
+  --color-white: #FFFFFF;
+  --color-soft-white: #F7F8FA;
+  --color-gold: #C3A15A;
+  --color-dark-gold: #8A692E;
+
+  /* --- Neutral Palette --- */
+  --color-ink: #101828;
+  --color-slate: #475467;
+  --color-muted: #667085;
+  --color-border: #D9DEE7;
+  --color-light-surface: #EEF1F5;
+
+  /* --- Semantic --- */
+  --color-success: #16794B;
+  --color-warning: #9A6700;
+  --color-error: #B42318;
+
+  /* --- Typography --- */
+  --font-heading: var(--font-manrope), 'Manrope', sans-serif;
+  --font-body: var(--font-inter), 'Inter', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background-color: var(--color-white);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-navy);
+  }
+
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.25rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img, video, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-white);
+  }
 }
