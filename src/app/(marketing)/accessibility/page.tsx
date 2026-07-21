@@ -3,7 +3,7 @@ import Link from "next/link";
 import HeroSection from "@/components/sections/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Accessibility — Bayshire Corp",
+  title: "Accessibility — Bayshire",
   description:
     "Bayshire is committed to making our website accessible to all users.",
 };

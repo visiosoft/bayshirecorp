@@ -4,7 +4,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import SectionIntro from "@/components/sections/SectionIntro";
 
 export const metadata: Metadata = {
-  title: "Purplebox Storage Case Study — Bayshire Corp",
+  title: "Purplebox Storage Case Study — Bayshire",
   description:
     "How Bayshire helped build the operating foundation for a modern self-storage business in the UAE.",
 };
@@ -19,30 +19,30 @@ const challenges = [
   "Technology decisions deferred, creating growing technical debt",
 ];
 
-const outcomes = [
+const deliverables = [
   {
-    label: "Booking conversion rate",
-    value: "[VERIFY METRIC]",
-    description:
-      "Increase in online booking completion rate after platform launch.",
+    label: "Centralised booking and inventory system",
+    status: "Implemented",
   },
   {
-    label: "Occupancy rate",
-    value: "[VERIFY METRIC]",
-    description:
-      "Facility occupancy within first 6 months of structured operations.",
+    label: "Automated pricing engine calibrated to unit-level economics",
+    status: "Implemented",
   },
   {
-    label: "Operational efficiency",
-    value: "[VERIFY METRIC]",
-    description:
-      "Reduction in manual administrative tasks through automation.",
+    label: "Customer lifecycle workflows — onboarding, renewal, and follow-up",
+    status: "Implemented",
   },
   {
-    label: "Customer retention",
-    value: "[VERIFY METRIC]",
-    description:
-      "Repeat customer rate after implementing structured follow-up process.",
+    label: "Operational playbooks for facility staff",
+    status: "Completed",
+  },
+  {
+    label: "Performance dashboards for occupancy, revenue, and retention",
+    status: "Implemented",
+  },
+  {
+    label: "Multi-facility expansion model",
+    status: "Designed",
   },
 ];
 
@@ -193,34 +193,30 @@ export default function PurpleboxStorageCaseStudyPage() {
         </div>
       </section>
 
-      {/* ===== Outcomes ===== */}
+      {/* ===== Deliverables ===== */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-[1240px] mx-auto px-6 md:px-8">
-          <SectionIntro eyebrow="OUTCOMES" title="Verified results" />
+          <SectionIntro eyebrow="DELIVERABLES" title="What was produced" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-            {outcomes.map((outcome) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+            {deliverables.map((item) => (
               <div
-                key={outcome.label}
+                key={item.label}
                 className="bg-soft-white rounded-xl p-6"
               >
-                <p className="text-gold font-heading text-2xl font-bold">
-                  {outcome.value}
-                </p>
-                <p className="text-navy font-heading text-sm font-semibold mt-2">
-                  {outcome.label}
-                </p>
-                <p className="text-slate text-sm mt-1">
-                  {outcome.description}
+                <span className={`inline-block text-xs font-semibold tracking-wider uppercase px-2.5 py-1 rounded-full mb-3 ${
+                  item.status === "Implemented" ? "bg-success/10 text-success" :
+                  item.status === "Completed" ? "bg-gold/10 text-dark-gold" :
+                  "bg-navy/10 text-navy"
+                }`}>
+                  {item.status}
+                </span>
+                <p className="text-navy font-heading text-sm font-semibold">
+                  {item.label}
                 </p>
               </div>
             ))}
           </div>
-
-          <p className="text-muted text-sm italic mt-6">
-            All metrics are pending final verification. Bayshire does not publish
-            unverified outcomes.
-          </p>
         </div>
       </section>
 
@@ -237,12 +233,20 @@ export default function PurpleboxStorageCaseStudyPage() {
             change and how to change it.
           </p>
 
-          <Link
-            href="/start"
-            className="inline-flex items-center justify-center h-12 px-8 bg-gold text-navy font-semibold text-sm rounded-lg hover:bg-dark-gold transition-colors mt-10"
-          >
-            Start Your Diagnosis
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
+            <Link
+              href="/health-check"
+              className="inline-flex items-center justify-center h-12 px-8 bg-gold text-navy font-semibold text-sm rounded-lg hover:bg-dark-gold transition-colors"
+            >
+              Take the Business Health Check
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center h-12 px-8 border border-white/30 text-white font-semibold text-sm rounded-lg hover:border-white/60 transition-colors"
+            >
+              Speak With Bayshire
+            </Link>
+          </div>
         </div>
       </section>
     </>

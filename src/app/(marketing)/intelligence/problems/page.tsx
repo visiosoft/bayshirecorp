@@ -4,7 +4,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import SectionIntro from "@/components/sections/SectionIntro";
 
 export const metadata: Metadata = {
-  title: "Business Problems We Solve — Bayshire Corp",
+  title: "Business Problems We Solve — Bayshire",
   description:
     "The patterns we see most often in growing businesses — and how Bayshire helps resolve them.",
 };
@@ -108,10 +108,10 @@ export default function ProblemsPage() {
           </p>
 
           <Link
-            href="/start"
+            href="/health-check"
             className="inline-flex items-center justify-center h-12 px-8 bg-gold text-navy font-semibold text-sm rounded-lg hover:bg-dark-gold transition-colors mt-10"
           >
-            Start Your Diagnosis
+            Take the Business Health Check
           </Link>
         </div>
       </section>

@@ -4,7 +4,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import SectionIntro from "@/components/sections/SectionIntro";
 
 export const metadata: Metadata = {
-  title: "Centuries Contracting Case Study — Bayshire Corp",
+  title: "Centuries Contracting Case Study — Bayshire",
   description:
     "How Bayshire helped a construction and contracting business gain financial visibility, project-level profitability, and governance structure for growth.",
 };
@@ -19,30 +19,30 @@ const challenges = [
   "Approval workflows were informal, creating risk as project values and team size increased",
 ];
 
-const outcomes = [
+const deliverables = [
   {
-    label: "Project profitability visibility",
-    value: "[VERIFY METRIC]",
-    description:
-      "Percentage of active projects with real-time P&L tracking.",
+    label: "Project-level P&L tracking and cost allocation structure",
+    status: "Implemented",
   },
   {
-    label: "Cash flow forecasting",
-    value: "[VERIFY METRIC]",
-    description:
-      "Improvement in forecast accuracy over a rolling 90-day window.",
+    label: "Management reporting framework with monthly cadence",
+    status: "Implemented",
   },
   {
-    label: "Reporting cadence",
-    value: "[VERIFY METRIC]",
-    description:
-      "Time from month-end close to management report delivery.",
+    label: "Approval workflows for procurement and variations",
+    status: "Implemented",
   },
   {
-    label: "Governance compliance",
-    value: "[VERIFY METRIC]",
-    description:
-      "Adoption rate of structured approval workflows across all projects.",
+    label: "Cash flow forecasting model",
+    status: "Completed",
+  },
+  {
+    label: "Multi-project portfolio dashboard",
+    status: "In Progress",
+  },
+  {
+    label: "Board reporting package and governance structure",
+    status: "Designed",
   },
 ];
 
@@ -193,34 +193,31 @@ export default function CenturiesContractingCaseStudyPage() {
         </div>
       </section>
 
-      {/* ===== Outcomes ===== */}
+      {/* ===== Deliverables ===== */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-[1240px] mx-auto px-6 md:px-8">
-          <SectionIntro eyebrow="OUTCOMES" title="Verified results" />
+          <SectionIntro eyebrow="DELIVERABLES" title="What was produced" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-            {outcomes.map((outcome) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+            {deliverables.map((item) => (
               <div
-                key={outcome.label}
+                key={item.label}
                 className="bg-soft-white rounded-xl p-6"
               >
-                <p className="text-gold font-heading text-2xl font-bold">
-                  {outcome.value}
-                </p>
-                <p className="text-navy font-heading text-sm font-semibold mt-2">
-                  {outcome.label}
-                </p>
-                <p className="text-slate text-sm mt-1">
-                  {outcome.description}
+                <span className={`inline-block text-xs font-semibold tracking-wider uppercase px-2.5 py-1 rounded-full mb-3 ${
+                  item.status === "Implemented" ? "bg-success/10 text-success" :
+                  item.status === "Completed" ? "bg-gold/10 text-dark-gold" :
+                  item.status === "In Progress" ? "bg-warning/10 text-warning" :
+                  "bg-navy/10 text-navy"
+                }`}>
+                  {item.status}
+                </span>
+                <p className="text-navy font-heading text-sm font-semibold">
+                  {item.label}
                 </p>
               </div>
             ))}
           </div>
-
-          <p className="text-muted text-sm italic mt-6">
-            All metrics are pending final verification. Bayshire does not publish
-            unverified outcomes.
-          </p>
         </div>
       </section>
 
@@ -237,12 +234,20 @@ export default function CenturiesContractingCaseStudyPage() {
             change and how to change it.
           </p>
 
-          <Link
-            href="/start"
-            className="inline-flex items-center justify-center h-12 px-8 bg-gold text-navy font-semibold text-sm rounded-lg hover:bg-dark-gold transition-colors mt-10"
-          >
-            Start Your Diagnosis
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
+            <Link
+              href="/health-check"
+              className="inline-flex items-center justify-center h-12 px-8 bg-gold text-navy font-semibold text-sm rounded-lg hover:bg-dark-gold transition-colors"
+            >
+              Take the Business Health Check
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center h-12 px-8 border border-white/30 text-white font-semibold text-sm rounded-lg hover:border-white/60 transition-colors"
+            >
+              Speak With Bayshire
+            </Link>
+          </div>
         </div>
       </section>
     </>

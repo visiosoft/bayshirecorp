@@ -1,214 +1,135 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HeroSection from "@/components/sections/HeroSection";
-import SectionIntro from "@/components/sections/SectionIntro";
 
 export const metadata: Metadata = {
-  title: "Business MRI — Bayshire Corp",
+  title: "Business Assessment and Operating Review | Bayshire Business MRI",
   description:
-    "A structured diagnostic that examines seven pillars of your business before recommending change. See what is working, what is not, and where to start.",
+    "A detailed review of your company's people, processes, systems, sales, finance, management, customer journey, and technology, with a prioritized roadmap for improvement.",
 };
 
-const pillars = [
-  {
-    number: "01",
-    title: "Strategy & Positioning",
-    description:
-      "Is the business competing on the right terms? Is the value proposition clear, differentiated, and aligned with market reality?",
-  },
-  {
-    number: "02",
-    title: "Customer Acquisition & Retention",
-    description:
-      "Is the pipeline predictable? Are acquisition costs sustainable? Is the business retaining and expanding its best accounts?",
-  },
-  {
-    number: "03",
-    title: "Sales & Marketing",
-    description:
-      "Are sales and marketing operating as a system? Is messaging consistent, and does the funnel move prospects to revenue efficiently?",
-  },
-  {
-    number: "04",
-    title: "Operations & Delivery",
-    description:
-      "Is the business delivering consistently? Are workflows documented, repeatable, and free of unnecessary friction?",
-  },
-  {
-    number: "05",
-    title: "Financial Health & Unit Economics",
-    description:
-      "Does leadership have real-time visibility into financial performance? Are margins healthy? Is pricing aligned with value delivered?",
-  },
-  {
-    number: "06",
-    title: "Leadership, Governance & People",
-    description:
-      "Is decision-making structured? Are roles clear? Does the team operate with accountability and without founder bottlenecks?",
-  },
-  {
-    number: "07",
-    title: "Technology, Data & AI Readiness",
-    description:
-      "Is the tech stack enabling or constraining the business? Is data accessible, accurate, and used for decisions?",
-  },
+const whoIsItFor = [
+  "Growing businesses facing owner dependency and unclear roles.",
+  "Companies with repeated operational problems and weak reporting.",
+  "Businesses with disconnected systems or departments.",
+  "Companies under expansion pressure or preparing for new locations.",
+  "Investor-backed businesses that need professional operating structures.",
 ];
 
-const deliverables = [
-  {
-    title: "Executive Business Health Score",
-    description:
-      "A single, defensible score across all seven pillars — with a breakdown showing relative strength and weakness.",
-  },
-  {
-    title: "Root-Cause Map",
-    description:
-      "A visual diagnostic showing how issues across pillars are connected — and which root causes are creating the most downstream drag.",
-  },
-  {
-    title: "Priority Matrix",
-    description:
-      "A clear ranking of what to fix first based on impact, effort, and risk — so leadership can act without second-guessing.",
-  },
-  {
-    title: "Data & Technology Opportunity Map",
-    description:
-      "An assessment of where automation, integration, and AI can eliminate waste and unlock new capability.",
-  },
-  {
-    title: "Founder Dependency Analysis",
-    description:
-      "A structured view of where the business relies too heavily on one person — and what it would take to distribute those functions.",
-  },
-  {
-    title: "90-Day Action Plan",
-    description:
-      "A phased roadmap of the first 90 days — with specific initiatives, owners, and measurable outcomes.",
-  },
+const whatWeExamine = [
+  "Leadership and decision-making",
+  "People, roles, and accountability",
+  "Operations and service delivery",
+  "Sales and customer journey",
+  "Customer experience and retention",
+  "Finance and management information",
+  "Technology, automation, and data",
+  "Cross-department handoffs and communication",
 ];
 
-const steps = [
-  {
-    title: "Application",
-    description:
-      "Submit a short application describing your business and the challenge you are facing.",
-  },
-  {
-    title: "Fit Assessment",
-    description:
-      "We review the application and confirm whether the MRI is the right starting point.",
-  },
-  {
-    title: "Kickoff Call",
-    description:
-      "A 60-minute call to align on objectives, scope, and access requirements.",
-  },
-  {
-    title: "Data & Document Review",
-    description:
-      "We examine financials, org charts, tech stack, customer data, and operational workflows.",
-  },
-  {
-    title: "Stakeholder Interviews",
-    description:
-      "Structured interviews with founders, leadership, and key team members.",
-  },
-  {
-    title: "Pillar-by-Pillar Analysis",
-    description:
-      "Each of the seven pillars is assessed independently using Bayshire's diagnostic framework.",
-  },
-  {
-    title: "Synthesis & Scoring",
-    description:
-      "Findings are mapped together, scored, and translated into a coherent diagnostic narrative.",
-  },
-  {
-    title: "Readout & Recommendations",
-    description:
-      "A 90-minute session to walk through findings, answer questions, and agree on next steps.",
-  },
+const howItWorks = [
+  { title: "Preparation", description: "We align on objectives, scope, access requirements, and timeline." },
+  { title: "Document Review", description: "We examine financials, org charts, process documentation, system landscape, and existing reports." },
+  { title: "Leadership Interviews", description: "Structured conversations with founders and senior leadership to understand priorities, frustrations, and goals." },
+  { title: "Staff Interviews", description: "Selected interviews with operational staff to understand how work actually happens day to day." },
+  { title: "Process Review", description: "Direct observation and mapping of critical workflows, handoffs, and decision points." },
+  { title: "Systems and Data Review", description: "Assessment of technology, integrations, data quality, and information flow." },
+  { title: "Findings Workshop", description: "A working session to present findings, validate observations, and discuss priorities." },
+  { title: "Final Roadmap", description: "Delivery of the complete assessment report with prioritized improvement roadmap." },
 ];
 
-const goodFit = [
-  "Revenue between $1M and $30M",
-  "Founder-led or family-owned business",
-  "Experiencing growth but feeling operational drag",
-  "Willing to examine all areas of the business",
-  "Open to structural change, not just surface fixes",
-  "Committed to a 90-day engagement minimum",
-];
-
-const poorFit = [
-  "Looking for a quick audit or checklist",
-  "Not willing to share financial or operational data",
-  "Expecting results without internal involvement",
-  "Seeking validation rather than honest diagnosis",
-  "Pre-revenue or pre-product businesses",
-  "Already working with another transformation partner",
+const clientReceives = [
+  { title: "Current-State Findings", description: "A clear picture of how the business operates today, including strengths, weaknesses, and root causes behind recurring problems." },
+  { title: "Risk and Opportunity Map", description: "Identification of the highest-impact risks to address and opportunities to capture." },
+  { title: "Priority Matrix", description: "A ranked list of what to fix first, based on impact, effort, and urgency." },
+  { title: "Operating-Model Recommendations", description: "Specific recommendations for roles, processes, systems, data, and management structure." },
+  { title: "Process and System Requirements", description: "Specifications for the workflows, tools, and integrations needed to support the recommended model." },
+  { title: "90-Day Action Plan", description: "A phased roadmap with specific initiatives, owners, and measurable outcomes for the first 90 days." },
 ];
 
 export default function BusinessMRIPage() {
   return (
     <>
       {/* Hero */}
-      <HeroSection
-        eyebrow="BUSINESS MRI"
-        title="See the business clearly before deciding what to change."
-        description="The Business MRI is a structured diagnostic that examines seven pillars of your company — so you can see what is working, what is not, and where to focus first."
-        primaryCta={{ label: "Apply for a Business MRI", href: "/start" }}
-        secondaryCta={{ label: "See case studies", href: "/case-studies" }}
-        variant="navy"
-      />
-
-      {/* What is examined */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-navy py-24 md:py-32">
         <div className="max-w-[1240px] mx-auto px-6 md:px-8">
-          <SectionIntro
-            eyebrow="THE SEVEN PILLARS"
-            title="What is examined"
-            description="Each pillar is assessed independently, then mapped together to reveal how issues in one area are creating drag across the business."
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
-            {pillars.map((pillar) => (
-              <div
-                key={pillar.number}
-                className="bg-white border border-border rounded-xl p-7"
-              >
-                <span className="text-gold font-heading text-sm font-bold">
-                  {pillar.number}
-                </span>
-                <h3 className="text-navy font-heading text-lg font-semibold mt-3">
-                  {pillar.title}
-                </h3>
-                <p className="text-slate text-[15px] leading-relaxed mt-2">
-                  {pillar.description}
-                </p>
-              </div>
-            ))}
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+            Business MRI
+          </p>
+          <h1 className="text-white font-heading text-4xl sm:text-5xl font-bold max-w-3xl leading-tight mb-6">
+            See What Is Working, What Is Broken, and What to Fix First
+          </h1>
+          <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-10">
+            The Bayshire Business MRI is a detailed assessment of how your
+            company operates. We examine the company across its key business
+            areas, identify the causes behind recurring problems, and produce a
+            practical improvement roadmap.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/health-check"
+              className="inline-flex items-center justify-center h-12 px-8 bg-gold text-navy font-semibold text-sm rounded-lg hover:bg-dark-gold transition-colors"
+            >
+              Apply for a Business MRI
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center h-12 px-8 border border-white/30 text-white font-semibold text-sm rounded-lg hover:border-white/60 transition-colors"
+            >
+              Book a Short Introduction Call
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* What the client receives */}
-      <section className="bg-soft-white py-20 md:py-28">
+      {/* Who it is for */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-[1240px] mx-auto px-6 md:px-8">
-          <SectionIntro
-            eyebrow="DELIVERABLES"
-            title="What the client receives"
-            centered
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
-            {deliverables.map((item) => (
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div>
+              <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+                Who It Is For
+              </p>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy mb-6">
+                Built for Companies That Have Outgrown Their Current Way of
+                Working
+              </h2>
+            </div>
+            <div>
+              <ul className="space-y-4">
+                {whoIsItFor.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-gold shrink-0 mt-2" />
+                    <span className="text-slate text-base leading-relaxed">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What we examine */}
+      <section className="bg-soft-white py-24 lg:py-32">
+        <div className="max-w-[1240px] mx-auto px-6 md:px-8">
+          <div className="max-w-2xl mx-auto text-center mb-14">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+              Scope
+            </p>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
+              What We Examine
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {whatWeExamine.map((item) => (
               <div
-                key={item.title}
-                className="bg-white rounded-xl p-7 border border-border"
+                key={item}
+                className="bg-white border border-border rounded-xl p-5 text-center"
               >
-                <h3 className="text-navy font-heading text-lg font-semibold">
-                  {item.title}
-                </h3>
-                <p className="text-slate text-[15px] leading-relaxed mt-3">
-                  {item.description}
+                <div className="w-2 h-2 rounded-full bg-gold mx-auto mb-3" />
+                <p className="text-navy font-heading text-sm font-semibold">
+                  {item}
                 </p>
               </div>
             ))}
@@ -217,24 +138,27 @@ export default function BusinessMRIPage() {
       </section>
 
       {/* How it works */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-[1240px] mx-auto px-6 md:px-8">
-          <SectionIntro
-            eyebrow="PROCESS"
-            title="How it works"
-            description="The MRI follows a structured eight-step process designed to minimise disruption while maximising diagnostic depth."
-          />
-          <div className="mt-14 space-y-6">
-            {steps.map((step, index) => (
+          <div className="max-w-2xl mb-14">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+              Process
+            </p>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
+              How It Works
+            </h2>
+          </div>
+          <div className="space-y-6 max-w-3xl">
+            {howItWorks.map((step, i) => (
               <div key={step.title} className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-white font-heading text-sm font-bold flex items-center justify-center">
-                  {index + 1}
+                  {i + 1}
                 </div>
                 <div>
                   <h3 className="text-navy font-heading text-base font-semibold">
                     {step.title}
                   </h3>
-                  <p className="text-slate text-[15px] leading-relaxed mt-1">
+                  <p className="text-slate text-sm leading-relaxed mt-1">
                     {step.description}
                   </p>
                 </div>
@@ -244,69 +168,96 @@ export default function BusinessMRIPage() {
         </div>
       </section>
 
-      {/* Good fit / Poor fit */}
-      <section className="bg-soft-white py-20 md:py-28">
+      {/* What the client receives */}
+      <section className="bg-soft-white py-24 lg:py-32">
         <div className="max-w-[1240px] mx-auto px-6 md:px-8">
-          <SectionIntro
-            eyebrow="IS THIS RIGHT FOR YOU"
-            title="Good fit vs. poor fit"
-            centered
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
-            {/* Good fit */}
-            <div className="bg-white rounded-xl p-8 border border-border">
-              <h3 className="text-navy font-heading text-xl font-semibold mb-6">
-                Good fit
+          <div className="max-w-2xl mx-auto text-center mb-14">
+            <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+              Deliverables
+            </p>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
+              What You Receive
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {clientReceives.map((item) => (
+              <div
+                key={item.title}
+                className="bg-white rounded-xl p-7 border border-border"
+              >
+                <h3 className="text-navy font-heading text-lg font-semibold">
+                  {item.title}
+                </h3>
+                <p className="text-slate text-sm leading-relaxed mt-3">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Important details */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="max-w-[1240px] mx-auto px-6 md:px-8">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-soft-white rounded-xl p-8 border border-border">
+              <h3 className="text-navy font-heading text-lg font-semibold mb-4">
+                No Obligation to Continue
               </h3>
-              <ul className="space-y-3">
-                {goodFit.map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-3 text-slate text-[15px]"
-                  >
-                    <span className="text-gold font-bold">&#10003;</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-slate text-sm leading-relaxed">
+                The Business MRI is a standalone engagement. You may use the
+                findings independently. Continuing to Design or Build with
+                Bayshire is entirely optional.
+              </p>
             </div>
-            {/* Poor fit */}
-            <div className="bg-white rounded-xl p-8 border border-border">
-              <h3 className="text-navy font-heading text-xl font-semibold mb-6">
-                Poor fit
+            <div className="bg-soft-white rounded-xl p-8 border border-border">
+              <h3 className="text-navy font-heading text-lg font-semibold mb-4">
+                Confidentiality
               </h3>
-              <ul className="space-y-3">
-                {poorFit.map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-3 text-slate text-[15px]"
-                  >
-                    <span className="text-muted font-bold">&#10007;</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-slate text-sm leading-relaxed">
+                All documents, interviews, and business information shared during
+                the MRI are treated with strict confidentiality and protected
+                under a formal agreement.
+              </p>
+            </div>
+            <div className="bg-soft-white rounded-xl p-8 border border-border">
+              <h3 className="text-navy font-heading text-lg font-semibold mb-4">
+                Investment
+              </h3>
+              <p className="text-slate text-sm leading-relaxed">
+                The Business MRI is a fixed-fee engagement. The exact scope and
+                fee are confirmed after an initial qualification conversation.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="bg-navy py-20 md:py-28">
+      <section className="bg-navy py-24 lg:py-32">
         <div className="max-w-[1240px] mx-auto px-6 md:px-8 text-center">
           <h2 className="text-white font-heading text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
-            Ready to see what is really happening inside the business?
+            Ready to See What Is Really Happening Inside Your Business?
           </h2>
-          <p className="text-white/80 text-lg mt-6 max-w-xl mx-auto">
-            The MRI is where every Bayshire engagement begins. Apply now and we
-            will schedule a fit assessment within 48 hours.
+          <p className="text-white/60 text-lg mt-6 max-w-xl mx-auto">
+            Apply for a Business MRI and we will schedule a qualification
+            conversation to confirm fit and scope.
           </p>
-          <Link
-            href="/start"
-            className="bg-gold text-navy px-7 py-3.5 rounded-lg font-heading text-sm font-semibold hover:bg-[#d4b76e] transition-colors inline-flex mt-8"
-          >
-            Apply for a Business MRI
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
+            <Link
+              href="/health-check"
+              className="inline-flex items-center justify-center h-12 px-8 bg-gold text-navy font-semibold text-sm rounded-lg hover:bg-dark-gold transition-colors"
+            >
+              Apply for a Business MRI
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center h-12 px-8 border border-white/30 text-white font-semibold text-sm rounded-lg hover:border-white/60 transition-colors"
+            >
+              Book a Short Introduction Call
+            </Link>
+          </div>
         </div>
       </section>
     </>

@@ -4,7 +4,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import SectionIntro from "@/components/sections/SectionIntro";
 
 export const metadata: Metadata = {
-  title: "How We Work — Bayshire Corp",
+  title: "How We Work — Bayshire",
   description:
     "What to expect from an engagement with Bayshire. A structured approach to diagnosing, designing, building, and scaling business systems.",
 };
@@ -167,10 +167,10 @@ export default function HowWeWorkPage() {
             the diagnostic process.
           </p>
           <Link
-            href="/start"
+            href="/health-check"
             className="inline-flex items-center justify-center h-12 px-8 bg-gold text-navy font-semibold text-sm rounded-lg hover:bg-dark-gold transition-colors mt-10"
           >
-            Start Your Diagnosis
+            Take the Business Health Check
           </Link>
         </div>
       </section>

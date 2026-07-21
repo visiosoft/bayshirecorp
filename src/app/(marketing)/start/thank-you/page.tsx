@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Application Received — Bayshire Corp",
+  title: "Application Received — Bayshire",
   description:
     "Thank you for your application. We will review it and respond within 48 hours.",
 };

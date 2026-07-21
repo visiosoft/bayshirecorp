@@ -3,7 +3,7 @@ import Link from "next/link";
 import HeroSection from "@/components/sections/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Bayshire Corp",
+  title: "Case Studies — Bayshire",
   description:
     "Transformation is more useful when the work behind it is visible. Explore how Bayshire has helped businesses redesign their operations.",
 };
@@ -103,10 +103,10 @@ export default function CaseStudiesPage() {
           </p>
 
           <Link
-            href="/start"
+            href="/health-check"
             className="inline-flex items-center justify-center h-12 px-8 bg-gold text-navy font-semibold text-sm rounded-lg hover:bg-dark-gold transition-colors mt-10"
           >
-            Start Your Diagnosis
+            Take the Business Health Check
           </Link>
         </div>
       </section>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import HeroSection from "@/components/sections/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Business Tools — Bayshire Corp",
+  title: "Business Tools — Bayshire",
   description:
     "Interactive tools and frameworks to help you assess and improve your business operations.",
 };

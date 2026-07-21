@@ -3,7 +3,7 @@ import Link from "next/link";
 import HeroSection from "@/components/sections/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Intelligence — Bayshire Corp",
+  title: "Intelligence — Bayshire",
   description:
     "Explore Bayshire's library of business problems, insights, and tools designed to help ambitious companies operate better.",
 };
@@ -15,13 +15,6 @@ const sections = [
       "The patterns we see most often in growing businesses — and how we approach solving them.",
     href: "/intelligence/problems",
     cta: "Explore Problems",
-  },
-  {
-    title: "Insights",
-    description:
-      "Thought leadership on business transformation, operating models, and scaling strategies.",
-    href: "/intelligence/insights",
-    cta: "Read Insights",
   },
   {
     title: "Business Tools",
@@ -76,10 +69,10 @@ export default function IntelligencePage() {
             today.
           </p>
           <Link
-            href="/start"
+            href="/health-check"
             className="mt-8 inline-flex items-center rounded-lg bg-gold px-7 py-3.5 font-heading text-sm font-semibold text-navy transition-colors hover:bg-[#d4b76e]"
           >
-            Start Your Diagnosis
+            Take the Business Health Check
           </Link>
         </div>
       </section>

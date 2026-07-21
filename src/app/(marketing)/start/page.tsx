@@ -3,7 +3,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import DiagnosisForm from "@/components/forms/DiagnosisForm";
 
 export const metadata: Metadata = {
-  title: "Start Your Diagnosis — Bayshire Corp",
+  title: "Start Your Diagnosis — Bayshire",
   description:
     "Tell us what the business is trying to achieve — and what is getting in the way. Begin your Business MRI application.",
 };

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Bayshire Corp",
+  title: "Terms of Service — Bayshire",
   description:
-    "Terms and conditions governing the use of Bayshire Corp services and website.",
+    "Terms and conditions governing the use of Bayshire services and website.",
 };
 
 export default function TermsPage() {
@@ -14,7 +14,7 @@ export default function TermsPage() {
         variant="white"
         eyebrow="LEGAL"
         title="Terms of Service"
-        description="Terms and conditions governing the use of Bayshire Corp services and website."
+        description="Terms and conditions governing the use of Bayshire services and website."
       />
 
       <section className="bg-white py-16 md:py-24">

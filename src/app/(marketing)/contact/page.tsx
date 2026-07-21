@@ -1,131 +1,98 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HeroSection from "@/components/sections/HeroSection";
-import SectionIntro from "@/components/sections/SectionIntro";
 import ContactForm from "@/components/forms/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact — Bayshire Corp",
+  title: "Contact — Bayshire",
   description:
-    "Start with the reason for the conversation. Whether you are exploring transformation, partnerships, or general inquiries.",
+    "Share the main challenge you are facing. We will review your message and respond within one business day.",
 };
-
-const routingCards = [
-  {
-    title: "Business transformation inquiry",
-    description:
-      "You are considering a structured diagnostic or transformation engagement. Start with the application.",
-    href: "/start",
-    linkLabel: "Begin application",
-    type: "link" as const,
-    primary: true,
-  },
-  {
-    title: "Partnership or specialist collaboration",
-    description:
-      "You represent an organisation interested in collaborating with Bayshire — referral partnerships, co-delivery, or ecosystem opportunities.",
-    href: "mailto:partnerships@bayshire.com",
-    linkLabel: "partnerships@bayshire.com",
-    type: "email" as const,
-    primary: false,
-  },
-  {
-    title: "Speaking or media",
-    description:
-      "You are inviting Bayshire to speak at an event, contribute to a publication, or participate in a podcast or interview.",
-    href: "mailto:media@bayshire.com",
-    linkLabel: "media@bayshire.com",
-    type: "email" as const,
-    primary: false,
-  },
-  {
-    title: "General company inquiry",
-    description:
-      "Your question does not fit the categories above. Use the form below to get in touch.",
-    href: "#contact-form",
-    linkLabel: "Go to form",
-    type: "anchor" as const,
-    primary: false,
-  },
-];
 
 export default function ContactPage() {
   return (
     <>
-      <HeroSection
-        variant="navy"
-        eyebrow="CONTACT"
-        title="Start with the reason for the conversation."
-        description="Different inquiries require different starting points. Choose the path that best describes your situation."
-      />
-
-      {/* Routing options */}
-      <section className="bg-white py-20 md:py-28">
+      {/* Hero */}
+      <section className="bg-navy py-24 md:py-32">
         <div className="max-w-[1240px] mx-auto px-6 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {routingCards.map((card) => (
-              <div
-                key={card.title}
-                className={
-                  card.primary
-                    ? "bg-navy text-white rounded-xl p-8"
-                    : "bg-white border border-border rounded-xl p-8"
-                }
-              >
-                <h3
-                  className={
-                    card.primary
-                      ? "text-white font-heading text-lg font-semibold"
-                      : "text-navy font-heading text-lg font-semibold"
-                  }
-                >
-                  {card.title}
-                </h3>
-                <p
-                  className={
-                    card.primary ? "text-white/70 mt-3" : "text-slate mt-3"
-                  }
-                >
-                  {card.description}
-                </p>
-                {card.primary ? (
-                  <Link
-                    href={card.href}
-                    className="inline-block mt-6 bg-gold text-navy px-6 py-3 rounded-lg font-heading text-sm font-semibold hover:bg-dark-gold transition-colors"
-                  >
-                    {card.linkLabel}
-                  </Link>
-                ) : card.type === "email" ? (
-                  <a
-                    href={card.href}
-                    className="inline-block mt-6 text-gold font-heading text-sm font-semibold hover:text-dark-gold transition-colors"
-                  >
-                    {card.linkLabel}
-                  </a>
-                ) : (
-                  <a
-                    href={card.href}
-                    className="inline-block mt-6 text-gold font-heading text-sm font-semibold hover:text-dark-gold transition-colors"
-                  >
-                    {card.linkLabel}
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
+          <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+            Contact
+          </p>
+          <h1 className="text-white font-heading text-4xl sm:text-5xl font-bold max-w-3xl leading-tight mb-6">
+            Tell Us What Is Not Working Inside Your Business
+          </h1>
+          <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
+            Share the main challenge you are facing. We will review your message
+            and respond within one business day.
+          </p>
         </div>
       </section>
 
-      {/* Contact form */}
-      <section id="contact-form" className="bg-soft-white py-20 md:py-28">
+      {/* Form + Contact Info */}
+      <section className="bg-white py-24 lg:py-32">
         <div className="max-w-[1240px] mx-auto px-6 md:px-8">
-          <SectionIntro
-            eyebrow="GENERAL INQUIRY"
-            title="Send us a message"
-          />
+          <div className="grid lg:grid-cols-5 gap-16">
+            {/* Form */}
+            <div className="lg:col-span-3">
+              <ContactForm />
+            </div>
 
-          <div className="mt-10">
-            <ContactForm />
+            {/* Contact details */}
+            <div className="lg:col-span-2">
+              <div className="bg-soft-white rounded-xl p-8 border border-border">
+                <h2 className="font-heading text-xl font-semibold text-navy mb-6">
+                  Other Ways to Reach Us
+                </h2>
+
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-heading text-sm font-semibold text-navy mb-1">
+                      Email
+                    </h3>
+                    <a
+                      href="mailto:info@bayshirecorp.com"
+                      className="text-gold text-sm hover:text-dark-gold transition-colors"
+                    >
+                      info@bayshirecorp.com
+                    </a>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading text-sm font-semibold text-navy mb-1">
+                      Location
+                    </h3>
+                    <p className="text-slate text-sm">
+                      Dubai, United Arab Emirates
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading text-sm font-semibold text-navy mb-1">
+                      Response Time
+                    </h3>
+                    <p className="text-slate text-sm">
+                      We normally respond within one business day.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading text-sm font-semibold text-navy mb-1">
+                      Prefer a Quick Assessment First?
+                    </h3>
+                    <p className="text-slate text-sm mb-3">
+                      Take a two-minute business health check and receive your
+                      score before we speak.
+                    </p>
+                    <Link
+                      href="/health-check"
+                      className="text-gold text-sm font-semibold hover:text-dark-gold transition-colors inline-flex items-center gap-1"
+                    >
+                      Start the Health Check
+                      <span aria-hidden="true">&rarr;</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

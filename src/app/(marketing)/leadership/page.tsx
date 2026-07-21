@@ -4,9 +4,9 @@ import HeroSection from "@/components/sections/HeroSection";
 import SectionIntro from "@/components/sections/SectionIntro";
 
 export const metadata: Metadata = {
-  title: "Leadership — Bayshire Corp",
+  title: "Leadership — Bayshire",
   description:
-    "Meet the founder behind Bayshire Corp. Meisam Rasti brings real operating experience to every engagement.",
+    "Meet the founder behind Bayshire. Meisam Rasti brings real operating experience to every engagement.",
 };
 
 /* ---------- Data ---------- */
@@ -39,8 +39,8 @@ export default function LeadershipPage() {
             {/* Photo placeholder */}
             <div className="lg:col-span-2">
               <div className="bg-light-surface rounded-xl aspect-[3/4] flex items-center justify-center">
-                <span className="text-muted text-sm">
-                  Professional photography — coming soon
+                <span className="text-navy/30 font-heading text-sm">
+                  Founder Portrait
                 </span>
               </div>
             </div>
@@ -124,12 +124,20 @@ export default function LeadershipPage() {
             transformation, the first step is a conversation.
           </p>
 
-          <Link
-            href="/start"
-            className="inline-flex items-center justify-center h-12 px-8 bg-gold text-navy font-semibold text-sm rounded-lg hover:bg-dark-gold transition-colors mt-10"
-          >
-            Begin Your Diagnosis
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
+            <Link
+              href="/health-check"
+              className="inline-flex items-center justify-center h-12 px-8 bg-gold text-navy font-semibold text-sm rounded-lg hover:bg-dark-gold transition-colors"
+            >
+              Take the Business Health Check
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center h-12 px-8 border border-white/30 text-white font-semibold text-sm rounded-lg hover:border-white/60 transition-colors"
+            >
+              Speak With Bayshire
+            </Link>
+          </div>
         </div>
       </section>
     </>

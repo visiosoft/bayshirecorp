@@ -3,7 +3,7 @@ import Link from "next/link";
 import HeroSection from "@/components/sections/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Insights — Bayshire Corp",
+  title: "Insights — Bayshire",
   description:
     "Bayshire insights and thought leadership on business transformation, operating models, and scaling strategies.",
 };

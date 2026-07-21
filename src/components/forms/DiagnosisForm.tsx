@@ -461,7 +461,7 @@ export default function DiagnosisForm() {
             className="mt-1 h-4 w-4 rounded border-border text-gold focus:ring-gold/40"
           />
           <span className="text-slate text-sm leading-relaxed">
-            I consent to Bayshire Corp collecting and processing this
+            I consent to Bayshire collecting and processing this
             information to assess my application. See our{" "}
             <Link
               href="/privacy"
