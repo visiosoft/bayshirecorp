@@ -18,6 +18,31 @@ const nextConfig: NextConfig = {
         destination: "/about",
         permanent: true,
       },
+      {
+        source: "/intelligence/problems",
+        destination: "/what-we-solve",
+        permanent: true,
+      },
+      {
+        source: "/intelligence/tools",
+        destination: "/health-check",
+        permanent: true,
+      },
+      {
+        source: "/intelligence",
+        destination: "/what-we-solve",
+        permanent: true,
+      },
+      {
+        source: "/how-we-work",
+        destination: "/method",
+        permanent: true,
+      },
+      {
+        source: "/start/thank-you",
+        destination: "/health-check",
+        permanent: true,
+      },
     ];
   },
 };

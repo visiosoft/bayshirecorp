@@ -58,6 +58,18 @@ export default function ContactPage() {
 
                   <div>
                     <h3 className="font-heading text-sm font-semibold text-navy mb-1">
+                      Phone / WhatsApp
+                    </h3>
+                    <a
+                      href="tel:+971547882221"
+                      className="text-gold text-sm hover:text-dark-gold transition-colors"
+                    >
+                      +971 54 788 2221
+                    </a>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading text-sm font-semibold text-navy mb-1">
                       Location
                     </h3>
                     <p className="text-slate text-sm">

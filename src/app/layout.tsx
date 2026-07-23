@@ -71,7 +71,9 @@ export default function RootLayout({
                 addressLocality: "Dubai",
                 addressCountry: "AE",
               },
+              telephone: "+971547882221",
               email: "info@bayshirecorp.com",
+              legalName: "bayshirecorp",
               founder: {
                 "@type": "Person",
                 name: "Mase Rasti",

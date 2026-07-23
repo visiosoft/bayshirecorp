@@ -55,6 +55,14 @@ function FooterColumn({
   );
 }
 
+function PhoneIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 shrink-0" aria-hidden="true">
+      <path fillRule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clipRule="evenodd" />
+    </svg>
+  );
+}
+
 function EmailIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 shrink-0" aria-hidden="true">
@@ -105,6 +113,13 @@ export default function SiteFooter() {
                 <EmailIcon />
                 info@bayshirecorp.com
               </a>
+              <a
+                href="tel:+971547882221"
+                className="flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-white"
+              >
+                <PhoneIcon />
+                +971 54 788 2221
+              </a>
               <div className="flex items-center gap-2 text-sm text-white/50">
                 <LocationIcon />
                 Dubai, United Arab Emirates
@@ -124,7 +139,7 @@ export default function SiteFooter() {
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-6 sm:flex-row">
           <p className="text-xs text-white/40">
-            &copy; 2026 Bayshire. All rights reserved.
+            &copy; 2026 bayshirecorp. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link

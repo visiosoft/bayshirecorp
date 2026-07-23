@@ -66,7 +66,6 @@ const NAV_ITEMS: NavItem[] = [
     children: [
       { label: "About Bayshire", href: "/about" },
       { label: "Leadership", href: "/leadership" },
-      { label: "How We Work", href: "/how-we-work" },
     ],
   },
   {
@@ -275,7 +274,13 @@ export default function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          {/* Phone link hidden until a verified number is provided */}
+          <a
+            href="tel:+971547882221"
+            aria-label="Call Bayshire"
+            className="hidden md:flex items-center gap-1.5 text-white/60 hover:text-gold transition-colors text-sm"
+          >
+            <PhoneIcon className="h-4 w-4" />
+          </a>
 
           <Link
             href="/health-check"
@@ -332,7 +337,14 @@ export default function SiteHeader() {
               >
                 Business Health Check
               </Link>
-              {/* Call button hidden until a verified number is provided */}
+              <a
+                href="tel:+971547882221"
+                className="flex w-full items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-base font-medium text-white transition-all hover:border-white/40"
+                onClick={() => setMobileOpen(false)}
+              >
+                <PhoneIcon className="h-4 w-4" />
+                +971 54 788 2221
+              </a>
             </div>
           </div>
         </nav>
