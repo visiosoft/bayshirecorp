@@ -133,7 +133,7 @@ export default function HomePage() {
           }}
         />
 
-        <div className="relative max-w-[1240px] mx-auto px-6 md:px-8 py-28 lg:py-36">
+        <div className="relative max-w-[1240px] mx-auto px-6 md:px-8 py-16 lg:py-24">
           <div className="max-w-3xl">
             <p className="text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-6">
               Business Architecture &amp; Transformation
