@@ -6,7 +6,7 @@ import SectionIntro from "@/components/sections/SectionIntro";
 export const metadata: Metadata = {
   title: "Leadership — Bayshire",
   description:
-    "Meet the founder behind Bayshire. Meisam Rasti brings real operating experience to every engagement.",
+    "Meet the founder behind Bayshire. Mase Rasti brings real operating experience to every engagement.",
 };
 
 /* ---------- Data ---------- */
@@ -48,7 +48,7 @@ export default function LeadershipPage() {
             {/* Bio */}
             <div className="lg:col-span-3">
               <h2 className="text-navy font-heading text-3xl font-bold">
-                Meisam Rasti Talkhoncheh
+                Mase Rasti Talkhoncheh
               </h2>
 
               <p className="text-gold font-heading text-base font-semibold mt-2">
@@ -57,9 +57,11 @@ export default function LeadershipPage() {
 
               <div className="mt-6 space-y-5 text-slate text-[17px] leading-relaxed">
                 <p>
-                  Meisam founded Bayshire after spending over a decade building,
-                  restructuring, and scaling businesses across technology,
-                  logistics, construction, and professional services.
+                  Mase founded Bayshire after more than 15 years of building,
+                  managing, and improving businesses across Canada and Dubai,
+                  spanning construction, self-storage, moving services, sales,
+                  marketing, financial management, technology, and operational
+                  systems.
                 </p>
 
                 <p>
@@ -72,7 +74,7 @@ export default function LeadershipPage() {
                 </p>
 
                 <p>
-                  Bayshire exists because Meisam saw the same pattern repeatedly:
+                  Bayshire exists because Mase saw the same pattern repeatedly:
                   ambitious founders with strong commercial instincts but without
                   the internal infrastructure to support sustainable growth. The
                   Business MRI — Bayshire&apos;s diagnostic methodology — was
@@ -90,7 +92,7 @@ export default function LeadershipPage() {
         <div className="max-w-[1240px] mx-auto px-6 md:px-8">
           <SectionIntro
             eyebrow="POINT OF VIEW"
-            title="How Meisam thinks about the work"
+            title="How Mase thinks about the work"
           />
 
           <div className="mt-10 space-y-8">
@@ -104,7 +106,7 @@ export default function LeadershipPage() {
                 </blockquote>
 
                 <p className="text-muted text-sm mt-4">
-                  — Meisam Rasti, Founder
+                  — Mase Rasti, Founder
                 </p>
               </div>
             ))}

@@ -202,6 +202,196 @@ export default function DiagnosePage() {
         </div>
       </section>
 
+      {/* Example: What a Diagnostic Reveals */}
+      <section className="bg-white py-20 md:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 md:px-8">
+          <SectionIntro
+            eyebrow="Real Example"
+            title="What a diagnostic reveals"
+            description="A concrete scenario showing what the diagnostic process uncovers beneath the surface."
+          />
+
+          <div className="mx-auto mt-12 max-w-3xl rounded-lg border border-border bg-soft-white p-8 md:p-10">
+            <p className="font-heading text-lg font-bold text-navy">
+              The Scenario
+            </p>
+            <p className="mt-3 leading-relaxed text-slate">
+              A moving company with 40 employees had grown from one city to
+              three. Revenue was up, but margins were shrinking and the founder
+              was working 14-hour days. He still approved every discount, hired
+              every driver, and handled every customer complaint personally. He
+              assumed the problem was &ldquo;lazy managers.&rdquo;
+            </p>
+
+            <p className="mt-8 font-heading text-lg font-bold text-navy">
+              What the Diagnostic Revealed
+            </p>
+            <ul className="mt-4 space-y-4">
+              <li className="flex items-start gap-3 text-slate">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                <span className="leading-relaxed">
+                  <strong className="text-navy">No defined authority levels.</strong>{" "}
+                  Staff escalated everything because nobody knew what they were
+                  allowed to decide. The managers were not lazy — they were
+                  never given authority.
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-slate">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                <span className="leading-relaxed">
+                  <strong className="text-navy">No documented sales process.</strong>{" "}
+                  Each salesperson quoted differently. Discounts ranged from 5%
+                  to 30% with no logic. The founder was the only pricing
+                  control.
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-slate">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                <span className="leading-relaxed">
+                  <strong className="text-navy">Three disconnected systems.</strong>{" "}
+                  CRM, accounting, and WhatsApp each held different pieces of
+                  customer data. No information flowed between them. Nobody had
+                  a complete picture.
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-slate">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                <span className="leading-relaxed">
+                  <strong className="text-navy">No management reporting.</strong>{" "}
+                  The founder checked each system manually every morning. There
+                  were no dashboards, no KPIs, and no way for managers to see
+                  their own performance.
+                </span>
+              </li>
+            </ul>
+
+            <p className="mt-8 leading-relaxed text-slate">
+              The problem was never &ldquo;lazy managers.&rdquo; It was an
+              organisation that had outgrown its founder-led operating model but
+              never built the structures to replace it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Typical Timeline */}
+      <section className="bg-soft-white py-20 md:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 md:px-8">
+          <SectionIntro
+            eyebrow="Timeline"
+            title="Typical timeline"
+            description="A standard diagnostic engagement follows four phases over five to six weeks."
+          />
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-lg border border-border bg-white p-6">
+              <span className="inline-block rounded-full bg-navy px-3 py-1 font-heading text-xs font-bold text-gold">
+                Week 1
+              </span>
+              <h3 className="mt-4 font-heading text-base font-bold text-navy">
+                Preparation
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate">
+                Document collection, stakeholder mapping, interview scheduling,
+                and diagnostic scope confirmation.
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-white p-6">
+              <span className="inline-block rounded-full bg-navy px-3 py-1 font-heading text-xs font-bold text-gold">
+                Weeks 2–3
+              </span>
+              <h3 className="mt-4 font-heading text-base font-bold text-navy">
+                Discovery
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate">
+                Leadership interviews, staff interviews, process observation,
+                and on-the-ground data gathering.
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-white p-6">
+              <span className="inline-block rounded-full bg-navy px-3 py-1 font-heading text-xs font-bold text-gold">
+                Week 4
+              </span>
+              <h3 className="mt-4 font-heading text-base font-bold text-navy">
+                Analysis
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate">
+                Systems review, data analysis, cross-department mapping, and
+                root-cause identification.
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-white p-6">
+              <span className="inline-block rounded-full bg-navy px-3 py-1 font-heading text-xs font-bold text-gold">
+                Weeks 5–6
+              </span>
+              <h3 className="mt-4 font-heading text-base font-bold text-navy">
+                Synthesis
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate">
+                Findings synthesis, priority matrix construction, roadmap
+                development, and leadership presentation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Decision Gate: Ready for Design? */}
+      <section className="bg-white py-20 md:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 md:px-8">
+          <SectionIntro
+            eyebrow="Decision Gate"
+            title="Ready for Design?"
+            description="The diagnostic concludes with a clear decision point. These criteria must be met before moving to the Design stage."
+          />
+
+          <div className="mx-auto mt-12 max-w-3xl rounded-lg border border-border border-l-4 border-l-gold bg-soft-white p-8 md:p-10">
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 text-slate">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-border bg-white text-xs text-gold">
+                  ✓
+                </span>
+                <span className="leading-relaxed">
+                  Root causes are identified and distinguished from symptoms
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-slate">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-border bg-white text-xs text-gold">
+                  ✓
+                </span>
+                <span className="leading-relaxed">
+                  Leadership team has reviewed and accepted the findings
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-slate">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-border bg-white text-xs text-gold">
+                  ✓
+                </span>
+                <span className="leading-relaxed">
+                  Priority areas are agreed and sequenced
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-slate">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-border bg-white text-xs text-gold">
+                  ✓
+                </span>
+                <span className="leading-relaxed">
+                  Scope and boundaries for the Design stage are defined
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-slate">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-border bg-white text-xs text-gold">
+                  ✓
+                </span>
+                <span className="leading-relaxed">
+                  Quick wins have been identified for immediate action
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="bg-soft-white py-20 md:py-28">
         <div className="mx-auto max-w-[1240px] px-6 md:px-8">

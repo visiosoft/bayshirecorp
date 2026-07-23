@@ -141,8 +141,172 @@ export default function ScalePage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Example Scenario */}
       <section className="bg-white py-20 md:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 md:px-8">
+          <SectionIntro
+            eyebrow="In Practice"
+            title="Example: Scaling From One Location to Three"
+            description="A self-storage business had built a working operating model for its first facility. The Scale stage focused on turning that single success into a repeatable, manageable multi-site operation."
+          />
+
+          <div className="mt-12 space-y-6">
+            {[
+              {
+                title: "Location Launch Playbook",
+                detail:
+                  "Created a comprehensive playbook covering site selection criteria, fit-out standards, staffing plan, marketing activation, and technology setup—so every new facility opens with the same rigour as the first.",
+              },
+              {
+                title: "Facility Manager Role Design",
+                detail:
+                  "Standardised the facility manager role with a scorecard, authority limits, and escalation rules, giving each manager clear ownership without requiring founder involvement in daily decisions.",
+              },
+              {
+                title: "Multi-Facility Dashboard",
+                detail:
+                  "Built a dashboard showing occupancy, revenue, customer acquisition cost, and maintenance status across all locations, enabling leadership to spot trends and intervene early.",
+              },
+              {
+                title: "Monthly Business Review Cadence",
+                detail:
+                  "Established a monthly review where each facility manager presents performance against targets, creating accountability and a structured forum for problem-solving.",
+              },
+              {
+                title: "Franchise-Ready Operations Manual",
+                detail:
+                  "Designed a complete operations manual suitable for potential third-party operators, documenting every process, standard, and decision framework required to run a facility independently.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="rounded-lg border border-border bg-soft-white p-6"
+              >
+                <h3 className="font-heading text-lg font-bold text-navy">
+                  {item.title}
+                </h3>
+                <p className="mt-2 leading-relaxed text-slate">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Typical Timeline */}
+      <section className="bg-soft-white py-20 md:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 md:px-8">
+          <SectionIntro
+            eyebrow="Duration"
+            title="Typical Timeline"
+            description="The Scale stage follows a structured cadence that moves from stabilising the current model to launching and supporting expansion."
+          />
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            {[
+              {
+                period: "Months 1–2",
+                label: "Baseline & Routine Design",
+                items: [
+                  "Performance baseline",
+                  "Management routine design",
+                  "Optimisation priorities",
+                ],
+              },
+              {
+                period: "Months 3–4",
+                label: "Replication Planning",
+                items: [
+                  "Replication planning",
+                  "Playbook development",
+                  "Expansion preparation",
+                ],
+              },
+              {
+                period: "Months 5–6",
+                label: "Launch & Support",
+                items: [
+                  "New location or team launch support",
+                  "Monitoring and adjustment",
+                ],
+              },
+              {
+                period: "Ongoing",
+                label: "Continuous Improvement",
+                items: [
+                  "Quarterly reviews",
+                  "Continuous improvement",
+                  "Strategic alignment checks",
+                ],
+              },
+            ].map((phase, i) => (
+              <div
+                key={i}
+                className="rounded-lg border border-border bg-white p-6"
+              >
+                <span className="inline-block rounded-full bg-navy px-3 py-1 font-heading text-xs font-bold text-gold">
+                  {phase.period}
+                </span>
+                <h3 className="mt-4 font-heading text-lg font-bold text-navy">
+                  {phase.label}
+                </h3>
+                <ul className="mt-3 space-y-2">
+                  {phase.items.map((item, j) => (
+                    <li key={j} className="flex items-start gap-2 text-slate">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Decision Gate */}
+      <section className="bg-white py-20 md:py-28">
+        <div className="mx-auto max-w-[1240px] px-6 md:px-8">
+          <SectionIntro
+            eyebrow="Decision Gate"
+            title="Scale-Ready Assessment"
+            description="Before growth is pursued, the business must meet these criteria. Each item represents a condition that must be true for scaling to succeed."
+          />
+
+          <div className="mt-12 rounded-lg border border-border border-l-gold border-l-4 bg-soft-white p-8">
+            <ul className="space-y-5">
+              {[
+                "The operating model produces consistent results without founder involvement in daily operations.",
+                "Management team can identify, escalate, and resolve problems using defined processes.",
+                "Financial and operational reporting supports data-driven decisions at every level.",
+                "New locations or teams can be launched using documented playbooks and standards.",
+                "Continuous improvement is embedded through regular reviews and measured outcomes.",
+              ].map((criterion, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-navy/30">
+                    <svg
+                      className="h-3 w-3 text-gold"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </span>
+                  <span className="leading-relaxed text-slate">{criterion}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-soft-white py-20 md:py-28">
         <div className="mx-auto max-w-[1240px] px-6 text-center md:px-8">
           <h2 className="font-heading text-3xl font-bold text-navy md:text-4xl">
             Growth that lasts.
